@@ -1,0 +1,29 @@
+[
+  {
+    "image": "image_001_rotated.jpg",
+    "kontext_images": "image_001.jpg",
+    "prompt": "Rotate the image 90 degrees clockwise"
+  },
+  {
+    "image": "image_002_rotated.jpg",
+    "kontext_images": "image_002.jpg",
+    "prompt": "Rotate the image 180 degrees"
+  },
+  {
+    "image": "image_003_rotated.jpg",
+    "kontext_images": "image_003.jpg",
+    "prompt": "Rotate the image 90 degrees counterclockwise"
+  },
+  {
+    "image": "image_004_rotated.jpg",
+    "kontext_images": "image_004.jpg",
+    "prompt": "Rotate the image 270 degrees"
+  },
+  {
+    "image": "image_005_rotated.jpg",
+    "kontext_images": "image_005.jpg",
+    "prompt": "Rotate the image 45 degrees clockwise"
+  }
+]
+
+

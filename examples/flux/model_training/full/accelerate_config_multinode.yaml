@@ -1,0 +1,97 @@
+compute_environment: LOCAL_MACHINE
+debug: false
+
+# ============================================================================ #
+# DeepSpeed ZeRO-3 Configuration
+# ============================================================================ #
+deepspeed_config:
+  # Batch size configuration - DeepSpeed will use values from training script
+  # train_micro_batch_size_per_gpu: controlled by --batch_size in script
+  # train_batch_size: auto-calculated
+  # gradient_accumulation_steps: controlled by --gradient_accumulation_steps in script
+  # gradient_clipping: auto-detected from optimizer
+  
+  # Memory optimization - ZeRO Stage 3
+  offload_optimizer_device: none  # Set to 'cpu' if OOM (slower)
+  offload_param_device: none      # Set to 'cpu' if OOM (slower)
+  zero3_init_flag: true
+  zero3_save_16bit_model: true
+  zero_stage: 3
+  
+  # Communication optimization
+  overlap_comm: true
+  contiguous_gradients: true
+  reduce_bucket_size: 5e8
+  stage3_prefetch_bucket_size: 5e8
+  stage3_param_persistence_threshold: 1e6
+  stage3_gather_16bit_weights_on_model_save: false
+
+distributed_type: DEEPSPEED
+downcast_bf16: 'no'
+enable_cpu_affinity: false
+
+# ============================================================================ #
+# MULTINODE CONFIGURATION (2 nodes × 8 GPUs = 16 total processes)
+# ============================================================================ #
+# IMPORTANT: These values are OVERRIDDEN by CLI arguments in the launch script:
+#   --num_machines $NUM_NODES
+#   --num_processes $TOTAL_GPUS  (num_machines × GPUs_per_node)
+#   --machine_rank $NODE_RANK
+#   --main_process_ip $MASTER_ADDR
+#   --main_process_port $MASTER_PORT
+#
+# The values below serve as:
+#   1. Defaults for testing
+#   2. Documentation of the expected configuration
+#   3. Fallback if CLI args are not provided
+# ============================================================================ #
+
+# Node identification
+machine_rank: 0
+  # Node rank: 0 = master/rank-0, 1,2,3... = worker nodes
+  # CLI override: --machine_rank $NODE_RANK
+
+# Master node connection
+main_process_ip: null
+  # IP address of the rank-0 (master) node
+  # CLI override: --main_process_ip $MASTER_ADDR
+  # CRITICAL: Must be reachable from all worker nodes!
+  # If this is null or wrong, each node will train independently!
+
+main_process_port: 29500
+  # Port for distributed coordination (same on all nodes)
+  # CLI override: --main_process_port $MASTER_PORT
+
+# Training configuration
+main_training_function: main
+
+mixed_precision: bf16
+  # Use BF16 for H100/A100 GPUs (better than FP16, no loss scaling needed)
+
+# Cluster topology
+num_machines: 2
+  # Total number of nodes in the cluster
+  # CLI override: --num_machines $NUM_NODES
+  # Example: 2 nodes
+
+num_processes: 16
+  # TOTAL number of GPU processes across ALL nodes (NOT per-node!)
+  # MUST equal: num_machines × GPUs_per_node
+  # CLI override: --num_processes $TOTAL_GPUS
+  # Example: 2 nodes × 8 GPUs/node = 16 total processes
+  # WRONG: Setting this to 8 would make each node think there are only 8 GPUs total!
+
+# Rendezvous configuration
+rdzv_backend: static
+  # 'static' = known node list (Pluto/SLURM), no dynamic discovery
+  # 'c10d' = dynamic node discovery (requires different setup)
+
+same_network: true
+  # All nodes must be on the same network for multinode training
+
+# TPU configuration (not used)
+tpu_env: []
+tpu_use_cluster: false
+tpu_use_sudo: false
+
+use_cpu: false

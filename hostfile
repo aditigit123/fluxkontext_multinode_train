@@ -1,0 +1,12 @@
+# DeepSpeed Hostfile for Multinode Training
+# Format: <hostname/ip> slots=<num_gpus>
+# 
+# Example for 2 nodes with 8 GPUs each:
+# node1 slots=8
+# node2 slots=8
+#
+# Replace with your actual node hostnames or IPs:
+localhost slots=8
+# worker-node-1 slots=8
+# worker-node-2 slots=8
+

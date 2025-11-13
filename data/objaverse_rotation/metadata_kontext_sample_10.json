@@ -1,0 +1,52 @@
+[
+  {
+    "image": "000-000-0002c6eafa154e8bb08ebafb715a8d46/albedo/0_8.png",
+    "kontext_images": "000-000-0002c6eafa154e8bb08ebafb715a8d46/albedo/0_28.png",
+    "prompt": "Rotate the image 135 degrees"
+  },
+  {
+    "image": "000-000-0002c6eafa154e8bb08ebafb715a8d46/albedo/0_12.png",
+    "kontext_images": "000-000-0002c6eafa154e8bb08ebafb715a8d46/albedo/0_28.png",
+    "prompt": "Rotate the image 180 degrees"
+  },
+  {
+    "image": "000-000-0002c6eafa154e8bb08ebafb715a8d46/albedo/0_20.png",
+    "kontext_images": "000-000-0002c6eafa154e8bb08ebafb715a8d46/albedo/0_28.png",
+    "prompt": "Rotate the image 270 degrees"
+  },
+  {
+    "image": "000-000-0002c6eafa154e8bb08ebafb715a8d46/albedo/0_24.png",
+    "kontext_images": "000-000-0002c6eafa154e8bb08ebafb715a8d46/albedo/0_28.png",
+    "prompt": "Rotate the image 315 degrees"
+  },
+  {
+    "image": "000-000-0002c6eafa154e8bb08ebafb715a8d46/albedo/0_9.png",
+    "kontext_images": "000-000-0002c6eafa154e8bb08ebafb715a8d46/albedo/0_29.png",
+    "prompt": "Rotate the image 135 degrees"
+  },
+  {
+    "image": "000-000-0002c6eafa154e8bb08ebafb715a8d46/albedo/0_13.png",
+    "kontext_images": "000-000-0002c6eafa154e8bb08ebafb715a8d46/albedo/0_29.png",
+    "prompt": "Rotate the image 180 degrees"
+  },
+  {
+    "image": "000-000-0002c6eafa154e8bb08ebafb715a8d46/albedo/0_17.png",
+    "kontext_images": "000-000-0002c6eafa154e8bb08ebafb715a8d46/albedo/0_29.png",
+    "prompt": "Rotate the image 225 degrees"
+  },
+  {
+    "image": "000-000-0002c6eafa154e8bb08ebafb715a8d46/albedo/0_21.png",
+    "kontext_images": "000-000-0002c6eafa154e8bb08ebafb715a8d46/albedo/0_29.png",
+    "prompt": "Rotate the image 270 degrees"
+  },
+  {
+    "image": "000-000-0002c6eafa154e8bb08ebafb715a8d46/albedo/0_25.png",
+    "kontext_images": "000-000-0002c6eafa154e8bb08ebafb715a8d46/albedo/0_29.png",
+    "prompt": "Rotate the image 315 degrees"
+  },
+  {
+    "image": "000-000-0002c6eafa154e8bb08ebafb715a8d46/albedo/0_6.png",
+    "kontext_images": "000-000-0002c6eafa154e8bb08ebafb715a8d46/albedo/0_30.png",
+    "prompt": "Rotate the image 90 degrees"
+  }
+]

@@ -1,0 +1,502 @@
+[
+  {
+    "image": "000-046-a429567d9e3149ac8ee8688ac8724341/albedo/0_5.png",
+    "edit_image": "000-046-a429567d9e3149ac8ee8688ac8724341/albedo/0_1.png",
+    "prompt": "Rotate the image 315 degrees"
+  },
+  {
+    "image": "000-146-293fc6beecd44a8aaf20df205822e742/albedo/0_13.png",
+    "edit_image": "000-146-293fc6beecd44a8aaf20df205822e742/albedo/0_21.png",
+    "prompt": "Rotate the image 90 degrees"
+  },
+  {
+    "image": "000-039-5f953b7526204f4f953b5424077ad82c/albedo/0_3.png",
+    "edit_image": "000-039-5f953b7526204f4f953b5424077ad82c/albedo/0_11.png",
+    "prompt": "Rotate the image 90 degrees"
+  },
+  {
+    "image": "000-003-dd71bd5460434b8bbebefbefb2634238/albedo/0_1.png",
+    "edit_image": "000-003-dd71bd5460434b8bbebefbefb2634238/albedo/0_13.png",
+    "prompt": "Rotate the image 135 degrees"
+  },
+  {
+    "image": "000-141-cc99f476d4574c77b53261de5bc2d6d7/albedo/0_20.png",
+    "edit_image": "000-141-cc99f476d4574c77b53261de5bc2d6d7/albedo/0_8.png",
+    "prompt": "Rotate the image 225 degrees"
+  },
+  {
+    "image": "000-159-a22882bf2d9a42ac8db0cf0c9503a4ee/albedo/0_20.png",
+    "edit_image": "000-159-a22882bf2d9a42ac8db0cf0c9503a4ee/albedo/0_24.png",
+    "prompt": "Rotate the image 45 degrees"
+  },
+  {
+    "image": "000-142-9781dd1e2bf049ed83ae599791ea4180/albedo/0_11.png",
+    "edit_image": "000-142-9781dd1e2bf049ed83ae599791ea4180/albedo/0_31.png",
+    "prompt": "Rotate the image 225 degrees"
+  },
+  {
+    "image": "000-002-e360ad87ed7845609d7ad8ea731d282e/albedo/0_27.png",
+    "edit_image": "000-002-e360ad87ed7845609d7ad8ea731d282e/albedo/0_3.png",
+    "prompt": "Rotate the image 90 degrees"
+  },
+  {
+    "image": "000-048-074c0b05d9644dd0ab5e2b932fa2bb5a/albedo/0_13.png",
+    "edit_image": "000-048-074c0b05d9644dd0ab5e2b932fa2bb5a/albedo/0_1.png",
+    "prompt": "Rotate the image 225 degrees"
+  },
+  {
+    "image": "000-090-400ff5159c9b44ba824b6bf726be2213/albedo/0_8.png",
+    "edit_image": "000-090-400ff5159c9b44ba824b6bf726be2213/albedo/0_16.png",
+    "prompt": "Rotate the image 90 degrees"
+  },
+  {
+    "image": "000-146-452b336b44174c8e8257eab5eaa8b674/albedo/0_2.png",
+    "edit_image": "000-146-452b336b44174c8e8257eab5eaa8b674/albedo/0_6.png",
+    "prompt": "Rotate the image 45 degrees"
+  },
+  {
+    "image": "000-017-8f3b0cc184c94690948c996bc87c7d64/albedo/0_29.png",
+    "edit_image": "000-017-8f3b0cc184c94690948c996bc87c7d64/albedo/0_9.png",
+    "prompt": "Rotate the image 135 degrees"
+  },
+  {
+    "image": "000-073-50859b76590046309ed5a6a0d994c203/albedo/0_1.png",
+    "edit_image": "000-073-50859b76590046309ed5a6a0d994c203/albedo/0_9.png",
+    "prompt": "Rotate the image 90 degrees"
+  },
+  {
+    "image": "000-092-ac7a64b15a284ff78c964b91a5d8d48d/albedo/0_7.png",
+    "edit_image": "000-092-ac7a64b15a284ff78c964b91a5d8d48d/albedo/0_27.png",
+    "prompt": "Rotate the image 225 degrees"
+  },
+  {
+    "image": "000-096-246e34fb0152439eb6bae909724d0293/albedo/0_31.png",
+    "edit_image": "000-096-246e34fb0152439eb6bae909724d0293/albedo/0_11.png",
+    "prompt": "Rotate the image 135 degrees"
+  },
+  {
+    "image": "000-146-80bd84594bdc4f5aa86b6289887e9337/albedo/0_28.png",
+    "edit_image": "000-146-80bd84594bdc4f5aa86b6289887e9337/albedo/0_24.png",
+    "prompt": "Rotate the image 315 degrees"
+  },
+  {
+    "image": "000-098-9e7fbcf154a64d70968d93431dd4baab/albedo/0_21.png",
+    "edit_image": "000-098-9e7fbcf154a64d70968d93431dd4baab/albedo/0_25.png",
+    "prompt": "Rotate the image 45 degrees"
+  },
+  {
+    "image": "000-088-1ee842e766484a4395fe3f4f321f14d1/albedo/0_3.png",
+    "edit_image": "000-088-1ee842e766484a4395fe3f4f321f14d1/albedo/0_23.png",
+    "prompt": "Rotate the image 225 degrees"
+  },
+  {
+    "image": "000-140-a80d57c79a3442c7ab0b1a240b5bc40e/albedo/0_30.png",
+    "edit_image": "000-140-a80d57c79a3442c7ab0b1a240b5bc40e/albedo/0_10.png",
+    "prompt": "Rotate the image 135 degrees"
+  },
+  {
+    "image": "000-007-28f4dbf7f063418c9bc2eefb0698b6b3/albedo/0_8.png",
+    "edit_image": "000-007-28f4dbf7f063418c9bc2eefb0698b6b3/albedo/0_16.png",
+    "prompt": "Rotate the image 90 degrees"
+  },
+  {
+    "image": "000-141-2ee073a782b149f88c3cb223293feaaf/albedo/0_7.png",
+    "edit_image": "000-141-2ee073a782b149f88c3cb223293feaaf/albedo/0_31.png",
+    "prompt": "Rotate the image 270 degrees"
+  },
+  {
+    "image": "000-031-6a5c9cb58be841e0b4ca64743eebf028/albedo/0_31.png",
+    "edit_image": "000-031-6a5c9cb58be841e0b4ca64743eebf028/albedo/0_15.png",
+    "prompt": "Rotate the image 180 degrees"
+  },
+  {
+    "image": "000-128-b99aa8c330f040649dbda4c082f6328b/albedo/0_31.png",
+    "edit_image": "000-128-b99aa8c330f040649dbda4c082f6328b/albedo/0_19.png",
+    "prompt": "Rotate the image 225 degrees"
+  },
+  {
+    "image": "000-058-844a16548cb548408cd89e88ff24e032/albedo/0_4.png",
+    "edit_image": "000-058-844a16548cb548408cd89e88ff24e032/albedo/0_20.png",
+    "prompt": "Rotate the image 180 degrees"
+  },
+  {
+    "image": "000-022-f5bb7040df4b47cea383d2812dd30bdc/albedo/0_17.png",
+    "edit_image": "000-022-f5bb7040df4b47cea383d2812dd30bdc/albedo/0_5.png",
+    "prompt": "Rotate the image 225 degrees"
+  },
+  {
+    "image": "000-009-a682b18feb8243eaa3c83035216b5c02/albedo/0_0.png",
+    "edit_image": "000-009-a682b18feb8243eaa3c83035216b5c02/albedo/0_16.png",
+    "prompt": "Rotate the image 180 degrees"
+  },
+  {
+    "image": "000-151-594cf7343db94097b5ac6b05d2a583c4/albedo/0_26.png",
+    "edit_image": "000-151-594cf7343db94097b5ac6b05d2a583c4/albedo/0_10.png",
+    "prompt": "Rotate the image 180 degrees"
+  },
+  {
+    "image": "000-054-02b8e14b37b14d41a5ff54da22bc4b37/albedo/0_28.png",
+    "edit_image": "000-054-02b8e14b37b14d41a5ff54da22bc4b37/albedo/0_8.png",
+    "prompt": "Rotate the image 135 degrees"
+  },
+  {
+    "image": "000-123-00497b681f1d4e88b24911c086b7b6f6/albedo/0_24.png",
+    "edit_image": "000-123-00497b681f1d4e88b24911c086b7b6f6/albedo/0_0.png",
+    "prompt": "Rotate the image 90 degrees"
+  },
+  {
+    "image": "000-135-3bfe0a7a751c421694f81bc2a1f2425d/albedo/0_0.png",
+    "edit_image": "000-135-3bfe0a7a751c421694f81bc2a1f2425d/albedo/0_12.png",
+    "prompt": "Rotate the image 135 degrees"
+  },
+  {
+    "image": "000-149-6290fdddeea342b48a93dad2a210c566/albedo/0_28.png",
+    "edit_image": "000-149-6290fdddeea342b48a93dad2a210c566/albedo/0_12.png",
+    "prompt": "Rotate the image 180 degrees"
+  },
+  {
+    "image": "000-108-49a7910e22f14451a0c6351891ff011c/albedo/0_2.png",
+    "edit_image": "000-108-49a7910e22f14451a0c6351891ff011c/albedo/0_14.png",
+    "prompt": "Rotate the image 135 degrees"
+  },
+  {
+    "image": "000-081-8dccfbfa736a4368932b856d45f40f69/albedo/0_11.png",
+    "edit_image": "000-081-8dccfbfa736a4368932b856d45f40f69/albedo/0_23.png",
+    "prompt": "Rotate the image 135 degrees"
+  },
+  {
+    "image": "000-055-fddf49f220e5462b831eb03e75dde807/albedo/0_28.png",
+    "edit_image": "000-055-fddf49f220e5462b831eb03e75dde807/albedo/0_20.png",
+    "prompt": "Rotate the image 270 degrees"
+  },
+  {
+    "image": "000-052-34e740d715df4a179106d5c34d524306/albedo/0_0.png",
+    "edit_image": "000-052-34e740d715df4a179106d5c34d524306/albedo/0_24.png",
+    "prompt": "Rotate the image 270 degrees"
+  },
+  {
+    "image": "000-084-397d9af19208408ead946d25abfdddd4/albedo/0_3.png",
+    "edit_image": "000-084-397d9af19208408ead946d25abfdddd4/albedo/0_7.png",
+    "prompt": "Rotate the image 45 degrees"
+  },
+  {
+    "image": "000-068-2c6fdf64f98b460b951467367c74a940/albedo/0_29.png",
+    "edit_image": "000-068-2c6fdf64f98b460b951467367c74a940/albedo/0_1.png",
+    "prompt": "Rotate the image 45 degrees"
+  },
+  {
+    "image": "000-003-292aafeb8486497a83a85d03361f98af/albedo/0_22.png",
+    "edit_image": "000-003-292aafeb8486497a83a85d03361f98af/albedo/0_6.png",
+    "prompt": "Rotate the image 180 degrees"
+  },
+  {
+    "image": "000-144-57da9d85c6684959a0fbd940fd43ac3b/albedo/0_14.png",
+    "edit_image": "000-144-57da9d85c6684959a0fbd940fd43ac3b/albedo/0_30.png",
+    "prompt": "Rotate the image 180 degrees"
+  },
+  {
+    "image": "000-001-e9149b6362aa4a9ba853af8a632e553d/albedo/0_4.png",
+    "edit_image": "000-001-e9149b6362aa4a9ba853af8a632e553d/albedo/0_28.png",
+    "prompt": "Rotate the image 270 degrees"
+  },
+  {
+    "image": "000-005-aab074d99694426fa159000137a003e0/albedo/0_3.png",
+    "edit_image": "000-005-aab074d99694426fa159000137a003e0/albedo/0_7.png",
+    "prompt": "Rotate the image 45 degrees"
+  },
+  {
+    "image": "000-008-844f31f1a5384e5294d63a371f9b902b/albedo/0_13.png",
+    "edit_image": "000-008-844f31f1a5384e5294d63a371f9b902b/albedo/0_29.png",
+    "prompt": "Rotate the image 180 degrees"
+  },
+  {
+    "image": "000-023-d9c6c144b03d4639a761f7f3a75c4816/albedo/0_31.png",
+    "edit_image": "000-023-d9c6c144b03d4639a761f7f3a75c4816/albedo/0_15.png",
+    "prompt": "Rotate the image 180 degrees"
+  },
+  {
+    "image": "000-113-aa7b04c57cc54e92af36c08a89fc9ad7/albedo/0_8.png",
+    "edit_image": "000-113-aa7b04c57cc54e92af36c08a89fc9ad7/albedo/0_0.png",
+    "prompt": "Rotate the image 270 degrees"
+  },
+  {
+    "image": "000-127-81fea7686a144932941e4793814ad86f/albedo/0_3.png",
+    "edit_image": "000-127-81fea7686a144932941e4793814ad86f/albedo/0_31.png",
+    "prompt": "Rotate the image 315 degrees"
+  },
+  {
+    "image": "000-076-47723d0ec73240d986639d447b25f104/albedo/0_30.png",
+    "edit_image": "000-076-47723d0ec73240d986639d447b25f104/albedo/0_22.png",
+    "prompt": "Rotate the image 270 degrees"
+  },
+  {
+    "image": "000-024-8590fcc3c8a84d2dadf132a33654efcb/albedo/0_30.png",
+    "edit_image": "000-024-8590fcc3c8a84d2dadf132a33654efcb/albedo/0_6.png",
+    "prompt": "Rotate the image 90 degrees"
+  },
+  {
+    "image": "000-018-721de0bca30845cb8fb055bdf7d6d557/albedo/0_2.png",
+    "edit_image": "000-018-721de0bca30845cb8fb055bdf7d6d557/albedo/0_22.png",
+    "prompt": "Rotate the image 225 degrees"
+  },
+  {
+    "image": "000-118-72e737a82cc24b78b66b89b09abdb2ca/albedo/0_4.png",
+    "edit_image": "000-118-72e737a82cc24b78b66b89b09abdb2ca/albedo/0_20.png",
+    "prompt": "Rotate the image 180 degrees"
+  },
+  {
+    "image": "000-078-d66b8b5d9d0040d6ac161a3a00fd4b3c/albedo/0_4.png",
+    "edit_image": "000-078-d66b8b5d9d0040d6ac161a3a00fd4b3c/albedo/0_8.png",
+    "prompt": "Rotate the image 45 degrees"
+  },
+  {
+    "image": "000-077-8dbd1a3daa7a4f2b8af16f335845adf5/albedo/0_20.png",
+    "edit_image": "000-077-8dbd1a3daa7a4f2b8af16f335845adf5/albedo/0_0.png",
+    "prompt": "Rotate the image 135 degrees"
+  },
+  {
+    "image": "000-123-0fa6d0427b664cff884389b212d17302/albedo/0_6.png",
+    "edit_image": "000-123-0fa6d0427b664cff884389b212d17302/albedo/0_2.png",
+    "prompt": "Rotate the image 315 degrees"
+  },
+  {
+    "image": "000-066-9d3e6d8cd859474fb357b62ebc57f97a/albedo/0_0.png",
+    "edit_image": "000-066-9d3e6d8cd859474fb357b62ebc57f97a/albedo/0_24.png",
+    "prompt": "Rotate the image 270 degrees"
+  },
+  {
+    "image": "000-148-90e6e700d675428e894550f3c3d05ac4/albedo/0_29.png",
+    "edit_image": "000-148-90e6e700d675428e894550f3c3d05ac4/albedo/0_21.png",
+    "prompt": "Rotate the image 270 degrees"
+  },
+  {
+    "image": "000-105-173cb4c3ef3644f9ae19d6aa09d43eaa/albedo/0_8.png",
+    "edit_image": "000-105-173cb4c3ef3644f9ae19d6aa09d43eaa/albedo/0_0.png",
+    "prompt": "Rotate the image 270 degrees"
+  },
+  {
+    "image": "000-013-2a9fd5640dc04892b208af44d89ee611/albedo/0_1.png",
+    "edit_image": "000-013-2a9fd5640dc04892b208af44d89ee611/albedo/0_21.png",
+    "prompt": "Rotate the image 225 degrees"
+  },
+  {
+    "image": "000-044-9363d01f5ff247b19373b360bf6dcf06/albedo/0_9.png",
+    "edit_image": "000-044-9363d01f5ff247b19373b360bf6dcf06/albedo/0_25.png",
+    "prompt": "Rotate the image 180 degrees"
+  },
+  {
+    "image": "000-061-c14d3de2cfc546ad94c3c9be4f24496a/albedo/0_18.png",
+    "edit_image": "000-061-c14d3de2cfc546ad94c3c9be4f24496a/albedo/0_2.png",
+    "prompt": "Rotate the image 180 degrees"
+  },
+  {
+    "image": "000-124-25392b75045946f7a4c9a03e3bea969e/albedo/0_30.png",
+    "edit_image": "000-124-25392b75045946f7a4c9a03e3bea969e/albedo/0_18.png",
+    "prompt": "Rotate the image 225 degrees"
+  },
+  {
+    "image": "000-036-c20c815f51f24e2e8b7a3213c1b73051/albedo/0_17.png",
+    "edit_image": "000-036-c20c815f51f24e2e8b7a3213c1b73051/albedo/0_13.png",
+    "prompt": "Rotate the image 315 degrees"
+  },
+  {
+    "image": "000-153-3e7c7503df3e45edb237e265afa1da2a/albedo/0_0.png",
+    "edit_image": "000-153-3e7c7503df3e45edb237e265afa1da2a/albedo/0_28.png",
+    "prompt": "Rotate the image 315 degrees"
+  },
+  {
+    "image": "000-051-e585657f6a61460e98860c68cc93f44f/albedo/0_1.png",
+    "edit_image": "000-051-e585657f6a61460e98860c68cc93f44f/albedo/0_5.png",
+    "prompt": "Rotate the image 45 degrees"
+  },
+  {
+    "image": "000-089-2ef62746aa6a41aa9c48d44eb0274e1f/albedo/0_31.png",
+    "edit_image": "000-089-2ef62746aa6a41aa9c48d44eb0274e1f/albedo/0_15.png",
+    "prompt": "Rotate the image 180 degrees"
+  },
+  {
+    "image": "000-038-5b7cfc37b51b45a8ab9e828842c2c4d3/albedo/0_4.png",
+    "edit_image": "000-038-5b7cfc37b51b45a8ab9e828842c2c4d3/albedo/0_24.png",
+    "prompt": "Rotate the image 225 degrees"
+  },
+  {
+    "image": "000-061-626f280cddf04ff6bb75a586b07d518f/albedo/0_5.png",
+    "edit_image": "000-061-626f280cddf04ff6bb75a586b07d518f/albedo/0_29.png",
+    "prompt": "Rotate the image 270 degrees"
+  },
+  {
+    "image": "000-145-2e4c7cfa6690440494cd2ddaeb3c9fee/albedo/0_16.png",
+    "edit_image": "000-145-2e4c7cfa6690440494cd2ddaeb3c9fee/albedo/0_0.png",
+    "prompt": "Rotate the image 180 degrees"
+  },
+  {
+    "image": "000-139-60f789b1580a4848892e0131027d8751/albedo/0_29.png",
+    "edit_image": "000-139-60f789b1580a4848892e0131027d8751/albedo/0_1.png",
+    "prompt": "Rotate the image 45 degrees"
+  },
+  {
+    "image": "000-046-322f034a724541c88d9d768b8bdf8749/albedo/0_31.png",
+    "edit_image": "000-046-322f034a724541c88d9d768b8bdf8749/albedo/0_7.png",
+    "prompt": "Rotate the image 90 degrees"
+  },
+  {
+    "image": "000-000-9433a6a8d9ac4c3786859e548ed6d8c1/albedo/0_0.png",
+    "edit_image": "000-000-9433a6a8d9ac4c3786859e548ed6d8c1/albedo/0_24.png",
+    "prompt": "Rotate the image 270 degrees"
+  },
+  {
+    "image": "000-020-b5ccfd034acf4aa3a1aa3c4cb4010b0f/albedo/0_4.png",
+    "edit_image": "000-020-b5ccfd034acf4aa3a1aa3c4cb4010b0f/albedo/0_16.png",
+    "prompt": "Rotate the image 135 degrees"
+  },
+  {
+    "image": "000-085-50e4a9303073438583b666105d4dc674/albedo/0_29.png",
+    "edit_image": "000-085-50e4a9303073438583b666105d4dc674/albedo/0_17.png",
+    "prompt": "Rotate the image 225 degrees"
+  },
+  {
+    "image": "000-010-234b7bba6b1d421f8a263303c82a9897/albedo/0_16.png",
+    "edit_image": "000-010-234b7bba6b1d421f8a263303c82a9897/albedo/0_12.png",
+    "prompt": "Rotate the image 315 degrees"
+  },
+  {
+    "image": "000-029-f6b420d63e694696a094b42d7a2989d7/albedo/0_15.png",
+    "edit_image": "000-029-f6b420d63e694696a094b42d7a2989d7/albedo/0_3.png",
+    "prompt": "Rotate the image 225 degrees"
+  },
+  {
+    "image": "000-094-a770545d3fd04afdb9649a03bb0f173e/albedo/0_2.png",
+    "edit_image": "000-094-a770545d3fd04afdb9649a03bb0f173e/albedo/0_10.png",
+    "prompt": "Rotate the image 90 degrees"
+  },
+  {
+    "image": "000-123-e5ef49e553f9437e8c4110d32f124399/albedo/0_1.png",
+    "edit_image": "000-123-e5ef49e553f9437e8c4110d32f124399/albedo/0_21.png",
+    "prompt": "Rotate the image 225 degrees"
+  },
+  {
+    "image": "000-133-0d4593f431f94de9a94815ec2c7715e9/albedo/0_25.png",
+    "edit_image": "000-133-0d4593f431f94de9a94815ec2c7715e9/albedo/0_9.png",
+    "prompt": "Rotate the image 180 degrees"
+  },
+  {
+    "image": "000-056-15ff58f3872d4b83826c65b92d8e08ab/albedo/0_2.png",
+    "edit_image": "000-056-15ff58f3872d4b83826c65b92d8e08ab/albedo/0_10.png",
+    "prompt": "Rotate the image 90 degrees"
+  },
+  {
+    "image": "000-130-0a58c1d7fb1048e48d369bab85deddc4/albedo/0_2.png",
+    "edit_image": "000-130-0a58c1d7fb1048e48d369bab85deddc4/albedo/0_10.png",
+    "prompt": "Rotate the image 90 degrees"
+  },
+  {
+    "image": "000-109-e720ed9b80144e6ebf3048988d0a438e/albedo/0_4.png",
+    "edit_image": "000-109-e720ed9b80144e6ebf3048988d0a438e/albedo/0_24.png",
+    "prompt": "Rotate the image 225 degrees"
+  },
+  {
+    "image": "000-008-21cf04a123c242f081f8019aa221f20d/albedo/0_19.png",
+    "edit_image": "000-008-21cf04a123c242f081f8019aa221f20d/albedo/0_27.png",
+    "prompt": "Rotate the image 90 degrees"
+  },
+  {
+    "image": "000-105-54da1c138aa74ffd8beedd6830c55204/albedo/0_24.png",
+    "edit_image": "000-105-54da1c138aa74ffd8beedd6830c55204/albedo/0_8.png",
+    "prompt": "Rotate the image 180 degrees"
+  },
+  {
+    "image": "000-027-95042dd6e0a045a59bd894e0e72a0acb/albedo/0_29.png",
+    "edit_image": "000-027-95042dd6e0a045a59bd894e0e72a0acb/albedo/0_9.png",
+    "prompt": "Rotate the image 135 degrees"
+  },
+  {
+    "image": "000-059-aec75fe2cfeb4c24b5d458b66d2185e0/albedo/0_3.png",
+    "edit_image": "000-059-aec75fe2cfeb4c24b5d458b66d2185e0/albedo/0_7.png",
+    "prompt": "Rotate the image 45 degrees"
+  },
+  {
+    "image": "000-099-dd11be5ae74548fab1ccf145d81507c3/albedo/0_29.png",
+    "edit_image": "000-099-dd11be5ae74548fab1ccf145d81507c3/albedo/0_17.png",
+    "prompt": "Rotate the image 225 degrees"
+  },
+  {
+    "image": "000-060-b402b27fd1cf4b5f9e537fa619378210/albedo/0_1.png",
+    "edit_image": "000-060-b402b27fd1cf4b5f9e537fa619378210/albedo/0_21.png",
+    "prompt": "Rotate the image 225 degrees"
+  },
+  {
+    "image": "000-007-6c57798254404b9caee61e710ea97ccb/albedo/0_28.png",
+    "edit_image": "000-007-6c57798254404b9caee61e710ea97ccb/albedo/0_20.png",
+    "prompt": "Rotate the image 270 degrees"
+  },
+  {
+    "image": "000-130-6b3f25c365c34f45baee39842ffb70f0/albedo/0_13.png",
+    "edit_image": "000-130-6b3f25c365c34f45baee39842ffb70f0/albedo/0_5.png",
+    "prompt": "Rotate the image 270 degrees"
+  },
+  {
+    "image": "000-051-2c8f3032f1674f6fbf820a94068b8063/albedo/0_31.png",
+    "edit_image": "000-051-2c8f3032f1674f6fbf820a94068b8063/albedo/0_19.png",
+    "prompt": "Rotate the image 225 degrees"
+  },
+  {
+    "image": "000-079-760026831b2b405685aed33818321972/albedo/0_15.png",
+    "edit_image": "000-079-760026831b2b405685aed33818321972/albedo/0_23.png",
+    "prompt": "Rotate the image 90 degrees"
+  },
+  {
+    "image": "000-153-18ee1a4364a14e85bb27f140c0588c1e/albedo/0_2.png",
+    "edit_image": "000-153-18ee1a4364a14e85bb27f140c0588c1e/albedo/0_6.png",
+    "prompt": "Rotate the image 45 degrees"
+  },
+  {
+    "image": "000-054-cf453c95639e49d58e4cd1637df85aee/albedo/0_16.png",
+    "edit_image": "000-054-cf453c95639e49d58e4cd1637df85aee/albedo/0_20.png",
+    "prompt": "Rotate the image 45 degrees"
+  },
+  {
+    "image": "000-122-3ddb845777fd41f2bd9046fe13b98e64/albedo/0_31.png",
+    "edit_image": "000-122-3ddb845777fd41f2bd9046fe13b98e64/albedo/0_7.png",
+    "prompt": "Rotate the image 90 degrees"
+  },
+  {
+    "image": "000-015-96678fd69976488eba3ff1c211e0452f/albedo/0_3.png",
+    "edit_image": "000-015-96678fd69976488eba3ff1c211e0452f/albedo/0_11.png",
+    "prompt": "Rotate the image 90 degrees"
+  },
+  {
+    "image": "000-122-7e5a16d13d6b484ebdc419d166d0f99f/albedo/0_27.png",
+    "edit_image": "000-122-7e5a16d13d6b484ebdc419d166d0f99f/albedo/0_23.png",
+    "prompt": "Rotate the image 315 degrees"
+  },
+  {
+    "image": "000-075-b03c2f947d5741d9830305bb7f38a5a1/albedo/0_30.png",
+    "edit_image": "000-075-b03c2f947d5741d9830305bb7f38a5a1/albedo/0_10.png",
+    "prompt": "Rotate the image 135 degrees"
+  },
+  {
+    "image": "000-098-c048d2bee4954a48ad37debad7cb9daa/albedo/0_9.png",
+    "edit_image": "000-098-c048d2bee4954a48ad37debad7cb9daa/albedo/0_17.png",
+    "prompt": "Rotate the image 90 degrees"
+  },
+  {
+    "image": "000-023-290df5b0b7b048aba467a3e5fbf19092/albedo/0_30.png",
+    "edit_image": "000-023-290df5b0b7b048aba467a3e5fbf19092/albedo/0_14.png",
+    "prompt": "Rotate the image 180 degrees"
+  },
+  {
+    "image": "000-120-9f11b0c88c344aeaae92505edbf7b159/albedo/0_0.png",
+    "edit_image": "000-120-9f11b0c88c344aeaae92505edbf7b159/albedo/0_12.png",
+    "prompt": "Rotate the image 135 degrees"
+  },
+  {
+    "image": "000-089-2b939d2a549e435c90a91a1c4c6de763/albedo/0_13.png",
+    "edit_image": "000-089-2b939d2a549e435c90a91a1c4c6de763/albedo/0_29.png",
+    "prompt": "Rotate the image 180 degrees"
+  },
+  {
+    "image": "000-155-845765dd97b8463cb39045e27e7e3a73/albedo/0_27.png",
+    "edit_image": "000-155-845765dd97b8463cb39045e27e7e3a73/albedo/0_23.png",
+    "prompt": "Rotate the image 315 degrees"
+  }
+]

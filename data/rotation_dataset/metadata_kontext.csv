@@ -1,0 +1,8 @@
+image,kontext_images,prompt
+image_001_rotated.jpg,image_001.jpg,"Rotate the image 90 degrees clockwise"
+image_002_rotated.jpg,image_002.jpg,"Rotate the image 180 degrees"
+image_003_rotated.jpg,image_003.jpg,"Rotate the image 90 degrees counterclockwise"
+image_004_rotated.jpg,image_004.jpg,"Rotate the image 270 degrees"
+image_005_rotated.jpg,image_005.jpg,"Rotate the image 45 degrees clockwise"
+
+

@@ -1,0 +1,8 @@
+# Ignore huge Objaverse rotation metadata
+data/objaverse_rotation/metadata_kontext.json
+data/objaverse_rotation/metadata_kontext_full.json
+data/objaverse_rotation/metadata_rotation.json
+# Ignore huge Objaverse rotation metadata
+data/objaverse_rotation/metadata_kontext.json
+data/objaverse_rotation/metadata_kontext_full.json
+data/objaverse_rotation/metadata_rotation.json

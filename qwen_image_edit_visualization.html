@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qwen-Image-Edit-2509 Expression Dataset Visualization</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .subtitle {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        .stat-label {
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+
+        .controls {
+            padding: 20px 30px;
+            background: #f8f9fa;
+            border-bottom: 2px solid #e9ecef;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .control-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        label {
+            font-weight: 600;
+            color: #495057;
+        }
+
+        select, input[type="text"] {
+            padding: 10px 15px;
+            border: 2px solid #dee2e6;
+            border-radius: 8px;
+            font-size: 1em;
+            min-width: 200px;
+            transition: all 0.3s;
+        }
+
+        select:focus, input[type="text"]:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 10px;
+            margin-left: auto;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+
+        button:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        button:disabled {
+            background: #adb5bd;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .prompt-display {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .prompt-number {
+            font-size: 0.9em;
+            opacity: 0.9;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .prompt-text {
+            font-size: 1.3em;
+            line-height: 1.5;
+            font-weight: 500;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .character-card {
+            background: white;
+            border: 2px solid #e9ecef;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .character-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            border-color: #667eea;
+        }
+
+        .character-name {
+            background: #667eea;
+            color: white;
+            padding: 12px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.1em;
+            text-transform: capitalize;
+        }
+
+        .image-comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2px;
+        }
+
+        .image-container {
+            position: relative;
+            background: #f8f9fa;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 250px;
+            object-fit: contain;
+            display: block;
+            background: white;
+        }
+
+        .image-label {
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+
+        .input-label {
+            background: rgba(52, 152, 219, 0.9);
+        }
+
+        .output-label {
+            background: rgba(46, 204, 113, 0.9);
+        }
+
+        .loading {
+            text-align: center;
+            padding: 50px;
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border: 1px solid #f5c6cb;
+        }
+
+        .view-mode-toggle {
+            display: flex;
+            gap: 10px;
+        }
+
+        .view-mode-toggle button {
+            padding: 8px 16px;
+            font-size: 0.9em;
+        }
+
+        .view-mode-toggle button.active {
+            background: #28a745;
+        }
+
+        @media (max-width: 768px) {
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .nav-buttons {
+                margin-left: 0;
+                width: 100%;
+            }
+
+            .nav-buttons button {
+                flex: 1;
+            }
+        }
+
+        .gallery-view .character-card {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .gallery-view .image-comparison {
+            grid-template-columns: 1fr;
+        }
+
+        .progress-bar {
+            height: 4px;
+            background: #e9ecef;
+            margin-top: 10px;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎨 Qwen-Image-Edit-2509</h1>
+            <p class="subtitle">Expression Dataset Visualization</p>
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-number">102</div>
+                    <div class="stat-label">Expression Prompts</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">15</div>
+                    <div class="stat-label">Characters</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">1,530</div>
+                    <div class="stat-label">Total Images</div>
+                </div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+            </div>
+        </header>
+
+        <div class="controls">
+            <div class="control-group">
+                <label for="promptSelect">Prompt:</label>
+                <select id="promptSelect">
+                    <!-- Populated by JavaScript -->
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label for="searchInput">Search:</label>
+                <input type="text" id="searchInput" placeholder="Search expressions...">
+            </div>
+
+            <div class="nav-buttons">
+                <button id="prevBtn" onclick="navigatePrompt(-1)">← Previous</button>
+                <button id="nextBtn" onclick="navigatePrompt(1)">Next →</button>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="prompt-display" id="promptDisplay">
+                <div class="prompt-number" id="promptNumber"></div>
+                <div class="prompt-text" id="promptText"></div>
+            </div>
+
+            <div class="comparison-grid" id="comparisonGrid">
+                <!-- Populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Configuration
+        const INPUT_DIR = "/mnt/localssd/consi_gen_output";
+        const OUTPUT_DIR = "/mnt/localssd/consi_gen_output/qwen_edit";
+        
+        const CHARACTERS = [
+            'apple', 'ballon', 'boy', 'candle', 'cat', 'clock', 'dog', 'girl',
+            'man', 'mohawk_man', 'monkey', 'old_woman', 'owl', 'penguine', 'teapot'
+        ];
+
+        const EXPRESSIONS = [
+            "Soft smile, relaxed gaze / Teeth showing, open eyes",
+            "Tight lips, slight brow knit",
+            "Downturned lips, dull gaze",
+            "One mouth corner lifted",
+            "Nose wrinkle, lips pressed",
+            "Calm, symmetrical face / Slight tension in eyes/lips",
+            "Slightly widened eyes",
+            "Eyebrows lifted mildly / Eyes wide, lips parted",
+            "Sparkle in eyes, subtle smile",
+            "Focused gaze",
+            "Averted gaze, closed smile / Blush, gaze down",
+            "One brow raised, head tilt / Furrowed brow, eyes shifting",
+            "Side glance, slight lip press",
+            "Eyes down, tight lips / Brow pinch, lips tremble",
+            "Chin up, slight smile / Confident gaze, slight smirk",
+            "Side-eye, pursed lips / Narrowed eyes, teeth pressed",
+            "Warm eyes, soft smile",
+            "Relaxed eyes, breath out / Eyes closing, posture softens",
+            "Lowered gaze, pressed lips",
+            "Blank stare, eyelids relaxed / Drooping eyes, yawn held",
+            "Slight head tilt, focused eyes / Raised brows, eye tracking",
+            "Pressed lips, gaze downward",
+            "Eyes locked, lips tight / Brow tension, jaw set",
+            "Eyes widened slightly",
+            "Soft smile, slight eyebrow raise / Eyes twinkle, mouth open slightly",
+            "Upward gaze, small smile",
+            "Tense lips, darting eyes",
+            "Tight lips, averted gaze / Brows low, jaw clenched",
+            "Soft eyes, calm smile",
+            "One raised brow, flat lips / Eyebrows uneven, subtle squint",
+            "Drooping eyelids, slack mouth",
+            "Expressionless, flat eyes",
+            "Closed eyes, tiny smirk / One brow raised, head tilt",
+            "Brows raised sharply, open lips",
+            "Broad grin, cheeks raised",
+            "Flared nose, brows down",
+            "Tearful eyes, brows raised",
+            "Smirk, partial eye roll / Narrowed eyes, chin up",
+            "Brows raised, subtle recoil / Lips open slightly like gag",
+            "Micro smirk/frown",
+            "Brows raised, lips parted / Eyes fully wide, lips stretched",
+            "Big open eyes and mouth",
+            "Wide eyes, head raised",
+            "Slight lean, parted lips",
+            "Eyes closed, nervous smile",
+            "Head tilt, twisted lips",
+            "Blush, eyes drop / Nervous laugh, head down",
+            "Gaze averted, tearful",
+            "Chin higher, wide stance",
+            "Crossed arms, glare",
+            "Head tilt, slight blush",
+            "Head tilts back slightly",
+            "Small frown, brows knit",
+            "Head in hand, mouth open",
+            "Lean forward, open lips",
+            "Brows furrowed, jaw tense",
+            "Gaze straight, chin forward",
+            "Brows up, soft parted lips",
+            "Big smile, raised cheeks",
+            "Brows slightly raised, soft eyes / Chin lifted, wide hopeful eyes",
+            "Brows pinched, mouth pressed",
+            "Eyes narrowed, lips tense",
+            "Eyes wide, slight breath in / Brows lifted, leaning forward",
+            "Smirk, lips tight, tilted head",
+            "Slouched posture, blank gaze",
+            "Slightly droopy features",
+            "Smirk widens, chin up",
+            "Eyes wide, head back",
+            "Eyes closed, mouth wide open, laughing",
+            "Teeth bared, eyes squinted / Shouting, chin forward, veins/brows bulging",
+            "Crying, trembling lips / Wailing, eyes shut, body shaking",
+            "Full sneer, asymmetric face, dismissive glare",
+            "Full recoil, squint, head turned away",
+            "Suppressed strong emotion, blankness held tightly",
+            "Screaming, bulging eyes, head recoil",
+            "Eyes/mouth fully open, body flinching",
+            "Big grin, leaning in / Eyes sparkling, arms up, bouncing posture",
+            "Raised brows, mouth open / Wide eyes, head leaning forward, breath held",
+            "Eyes shut, strong blush, body turned",
+            "Hands to face, intense squint, exaggerated tilt",
+            "Face buried, intense blush, hands covering face",
+            "Hands covering face, eyes squeezed shut",
+            "Closed eyes, wide smirk, chest forward",
+            "Face twisted, eyes squinted, aggressive stare",
+            "Eyes sparkle, smile widens / Eyes closed, big smile, lean in or touch",
+            "Full release posture, eyes closed, exhale",
+            "Heavy exhale, eyes sad / Head droops, tears starting, facial slack",
+            "Eye roll, exaggerated yawn, slouched posture",
+            "Wide-eyed, head tilt, brows high, intense focus",
+            "Teeth gritted, nostrils flared / Hands pulling hair, contorted face",
+            "Eyes blazing, aggressive lean in",
+            "Full eye-open + upturned head / Wide eyes, open mouth, body leaning back",
+            "Eyes closed, joyful laugh, sparkle in posture",
+            "Eyes glimmering, hands clasped, glowing expression",
+            "Quick glances, trembling lips / Wide, panicked eyes, heavy breathing, shoulders hunched",
+            "Angry stare with sadness in eyes, head tilt away",
+            "Beaming expression, open eyes, uplifted posture",
+            "Heavy eye roll, dismissive face twist",
+            "Eyes half-closed, head tilted / Fully shut eyes, mouth ajar, head hanging",
+            "Lack of reaction to stimuli / Visible detachment, blankness with slouch",
+            "Eyes shut, big smirk, puffed chest",
+            "Mouth agape, frozen posture / Full body jolt, eyes bulging, open scream"
+        ];
+
+        let currentPromptIndex = 0;
+
+        // Initialize
+        function init() {
+            populatePromptSelect();
+            loadPrompt(0);
+            setupEventListeners();
+        }
+
+        function populatePromptSelect() {
+            const select = document.getElementById('promptSelect');
+            EXPRESSIONS.forEach((expr, index) => {
+                const option = document.createElement('option');
+                option.value = index;
+                const truncated = expr.length > 50 ? expr.substring(0, 50) + '...' : expr;
+                option.textContent = `${index + 1}. ${truncated}`;
+                select.appendChild(option);
+            });
+        }
+
+        function setupEventListeners() {
+            document.getElementById('promptSelect').addEventListener('change', (e) => {
+                loadPrompt(parseInt(e.target.value));
+            });
+
+            document.getElementById('searchInput').addEventListener('input', (e) => {
+                filterPrompts(e.target.value);
+            });
+        }
+
+        function filterPrompts(searchText) {
+            const select = document.getElementById('promptSelect');
+            const options = select.querySelectorAll('option');
+            const lowerSearch = searchText.toLowerCase();
+            
+            let firstMatch = -1;
+            options.forEach((option, index) => {
+                const text = EXPRESSIONS[index].toLowerCase();
+                if (text.includes(lowerSearch)) {
+                    option.style.display = '';
+                    if (firstMatch === -1) firstMatch = index;
+                } else {
+                    option.style.display = 'none';
+                }
+            });
+
+            if (firstMatch !== -1 && searchText.length > 0) {
+                loadPrompt(firstMatch);
+            }
+        }
+
+        function loadPrompt(index) {
+            currentPromptIndex = index;
+            const expression = EXPRESSIONS[index];
+            
+            // Update display
+            document.getElementById('promptNumber').textContent = `Prompt ${index + 1} of ${EXPRESSIONS.length}`;
+            document.getElementById('promptText').textContent = `Change the subject's expression to ${expression} keeping everything else the same.`;
+            
+            // Update select
+            document.getElementById('promptSelect').value = index;
+            
+            // Update navigation buttons
+            document.getElementById('prevBtn').disabled = index === 0;
+            document.getElementById('nextBtn').disabled = index === EXPRESSIONS.length - 1;
+            
+            // Update progress
+            const progress = ((index + 1) / EXPRESSIONS.length) * 100;
+            document.getElementById('progressFill').style.width = `${progress}%`;
+            
+            // Load images
+            loadImages(index);
+        }
+
+        function loadImages(promptIndex) {
+            const grid = document.getElementById('comparisonGrid');
+            grid.innerHTML = '';
+            
+            CHARACTERS.forEach(character => {
+                const card = createCharacterCard(character, promptIndex);
+                grid.appendChild(card);
+            });
+        }
+
+        function createCharacterCard(character, promptIndex) {
+            const card = document.createElement('div');
+            card.className = 'character-card';
+            
+            const outputFolder = promptIndex < 34 
+                ? `outputs/output_${promptIndex + 1}`
+                : `outputs_medium/output_${promptIndex - 33}`;
+            
+            const inputPath = `${INPUT_DIR}/${character}.png`;
+            const outputPath = `${OUTPUT_DIR}/${outputFolder}/${character}.png`;
+            
+            card.innerHTML = `
+                <div class="character-name">${character.replace('_', ' ')}</div>
+                <div class="image-comparison">
+                    <div class="image-container">
+                        <img src="${inputPath}" alt="${character} input" 
+                             onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22250%22%3E%3Crect width=%22300%22 height=%22250%22 fill=%22%23f0f0f0%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 font-family=%22Arial%22 font-size=%2216%22 fill=%22%23999%22 text-anchor=%22middle%22 dy=%22.3em%22%3EImage not found%3C/text%3E%3C/svg%3E'">
+                        <span class="image-label input-label">Input</span>
+                    </div>
+                    <div class="image-container">
+                        <img src="${outputPath}" alt="${character} output"
+                             onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22250%22%3E%3Crect width=%22300%22 height=%22250%22 fill=%22%23f0f0f0%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 font-family=%22Arial%22 font-size=%2216%22 fill=%22%23999%22 text-anchor=%22middle%22 dy=%22.3em%22%3EImage not found%3C/text%3E%3C/svg%3E'">
+                        <span class="image-label output-label">Output</span>
+                    </div>
+                </div>
+            `;
+            
+            return card;
+        }
+
+        function navigatePrompt(direction) {
+            const newIndex = currentPromptIndex + direction;
+            if (newIndex >= 0 && newIndex < EXPRESSIONS.length) {
+                loadPrompt(newIndex);
+            }
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                navigatePrompt(-1);
+            } else if (e.key === 'ArrowRight') {
+                navigatePrompt(1);
+            }
+        });
+
+        // Initialize on load
+        window.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>
+
+
