@@ -21,17 +21,11 @@ set -e
 # ============================================================================ #
 # User-defined variables (set by Pluto launcher or use defaults for manual testing)
 
-export PROJECT_NAME="${PROJECT_NAME:-illustrator_pg1}"
 export NUM_NODES="${NUM_NODES:-2}"
 export NUM_GPUS="${NUM_GPUS:-8}"
 export WANDB_API_KEY="${WANDB_API_KEY:-local-30b57d5eb821ed35772f8799d7e6fc037a26aa1a}"
-export WANDB_JOB_TYPE="${WANDB_JOB_TYPE:-training}"
 export S3_EXPERIMENT_FOLDER="${S3_EXPERIMENT_FOLDER:-s3://phidias/experiments/flux-kontext-rotation-multinode}"
 export LOG_DIR="${LOG_DIR:-/mnt/localssd/mori-logdir/flux-kontext-rotation}"
-export GITHUB_BRANCH="${GITHUB_BRANCH:-main}"
-export COMMIT_HASH="${COMMIT_HASH:-HEAD}"
-export KEEP_CKPT_STEP_DIV_BY="${KEEP_CKPT_STEP_DIV_BY:-}"
-export PREFLIGHT_TEST_TIMEOUT="${PREFLIGHT_TEST_TIMEOUT:-300}"
 
 # Pluto sets RANK automatically - it's the node rank (0, 1, 2, ...)
 export PLUTO_NODE_RANK=${RANK:-0}

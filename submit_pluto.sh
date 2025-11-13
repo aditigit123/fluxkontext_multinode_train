@@ -18,20 +18,20 @@ set -euo pipefail
 ################################################################################################
 # User configuration (edit these for each run)
 ################################################################################################
-export USERDEF_EMAIL="your_email@adobe.com"
-export USERDEF_SLACK_CHANNEL_ID="CXXXX"
-export USERDEF_SLACK_MEMBER_ID="UXXXX"
-export USERDEF_WANDB_ENTITY="your-wandb-entity"
-export USERDEF_WANDB_PROJECT="flux-kontext"
-export USERDEF_WANDB_API_KEY="replace-with-real-key"
+export USERDEF_EMAIL=asinghan@adobe.com
+# export USERDEF_SLACK_CHANNEL_ID=C08HFRTUJBF
+# export USERDEF_SLACK_MEMBER_ID=U05227Y7U6M
+export USERDEF_WANDB_ENTITY=asinghan
+export USERDEF_WANDB_PROJECT=filix3-rotate-vector
+export USERDEF_WANDB_API_KEY=local-30b57d5eb821ed35772f8799d7e6fc037a26aa1a
 export USERDEF_GIT_BRANCH="main"
 export USERDEF_GIT_COMMIT="none"        # use "none" to keep HEAD of branch
-export USERDEF_EXP_ROOT="/sensei-fs-3/users/your_user/flux_kontext_logs"
-export USERDEF_EXP_NAME="flux-kontext-multinode"
-export USERDEF_S3_EXPERIMENT_ROOT="s3://your-bucket/experiments/flux-kontext"
+export USERDEF_EXP_ROOT="/sensei-fs/users/asinghan/logs"
+export USERDEF_EXP_NAME="czq-rv-20250828-train"
+export USERDEF_S3_EXPERIMENT_ROOT="s3://dit-scale-up/sensei-fs/users/asinghan/logs"
 export USERDEF_LOCAL_OUTPUT_ROOT="/mnt/localssd/flux-kontext"
-export USERDEF_METADATA_PATH="/sensei-fs/users/you/path/to/metadata.json"
-export USERDEF_S3_BUCKET="s3://path/to/kontext/data"
+export USERDEF_METADATA_PATH="/sensei-fs/users/asinghan/DiffSynth-Studio/data/objaverse_rotation/metadata_kontext_full.json"
+export USERDEF_S3_BUCKET="s3://phidias/zchen/czq_objaverse_toon_1280"
 export USERDEF_BATCH_SIZE="8"
 export USERDEF_GRAD_ACCUM="1"
 export USERDEF_NUM_EPOCHS="10"
@@ -42,6 +42,8 @@ export USERDEF_DATA_BATCH_VIZ_STEPS="1000,2000,3000"
 export USERDEF_TRAINABLE_MODELS="dit"
 export USERDEF_KEEP_CKPT_STEP_DIV_BY=""
 export USERDEF_WANDB_RUN_NAME=""
+export USERDEF_RESUME_CKPT="/sensei-fs/users/hezhan/user_space/Project/clio-train/mori/filix3/latest/ckpt_step01416000"
+export SKIP_OPTIMIZER_SCHEDULER_LOADING=0
 
 # Uncomment the following if you want MinIO to stage arrow data locally.
 # export USERDEF_MINIO_FROM_S3_PATH="s3://bucket/path/to/*.arrow"
@@ -87,8 +89,12 @@ export LOG_VIEWER_URL="https://dit-scale-up.s3.us-west-2.amazonaws.com/kaiz/soft
 echo "LOG_VIEWER_URL: ${LOG_VIEWER_URL}"
 
 export EMAIL="${USERDEF_EMAIL}"
-export SLACK_CHANNEL_ID="${USERDEF_SLACK_CHANNEL_ID}"
-export SLACK_MEMBER_ID="${USERDEF_SLACK_MEMBER_ID}"
+if [ -n "${USERDEF_SLACK_CHANNEL_ID:-}" ]; then
+  export SLACK_CHANNEL_ID="${USERDEF_SLACK_CHANNEL_ID}"
+fi
+if [ -n "${USERDEF_SLACK_MEMBER_ID:-}" ]; then
+  export SLACK_MEMBER_ID="${USERDEF_SLACK_MEMBER_ID}"
+fi
 source /opt/venv/bin/activate
 pip install /sensei-fs-3/users/kaiz/github_repos/foundation-job-butler
 }
@@ -98,7 +104,7 @@ pip install /sensei-fs-3/users/kaiz/github_repos/foundation-job-butler
 # Main execution block
 ################################################################################################
 {
-REPO_FOLDER="/mnt/localssd/github_repos/fluxkontext_multinode_train"
+REPO_FOLDER="/sensei-fs/users/asinghan/DiffSynth-Studio"
 SCRIPT_PATH="${REPO_FOLDER}/pluto_main_multinode_accelerate.sh"
 GIT_BRANCH="${USERDEF_GIT_BRANCH}"
 GIT_COMMIT="${USERDEF_GIT_COMMIT}"
@@ -170,6 +176,10 @@ export TRAINABLE_MODELS
 if [ -n "${KEEP_CKPT_STEP_DIV_BY}" ]; then
   export KEEP_CKPT_STEP_DIV_BY
 fi
+if [ -n "${USERDEF_RESUME_CKPT}" ] && [ "${USERDEF_RESUME_CKPT}" != "none" ]; then
+  export RESUME_CKPT="${USERDEF_RESUME_CKPT}"
+fi
+export SKIP_OPTIMIZER_SCHEDULER_LOADING
 
 chmod +x "${SCRIPT_PATH}"
 
