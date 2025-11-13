@@ -268,8 +268,8 @@ export HUGGINGFACE_HUB_TOKEN="${HUGGINGFACE_HUB_TOKEN:-$HF_TOKEN}"  # Many libra
 # export HF_HUB_ENABLE_HF_TRANSFER=1  # Uncomment if hf_transfer is installed
 export HF_HUB_DISABLE_TELEMETRY=1
 
-# WandB configuration
-export WANDB_BASE_URL="https://adobesensei.wandb.io"
+# WandB configuration (allow override from submit script/Pluto UI)
+export WANDB_BASE_URL="${WANDB_BASE_URL:-https://adobesensei.wandb.io}"
 
 echo "✓ Cache directories configured in /mnt/localssd"
 
@@ -362,6 +362,11 @@ SAVE_STEPS="${SAVE_STEPS:-10}"      # Save checkpoint every 10 steps - TESTING M
 DATA_BATCH_VIZ_STEPS="${DATA_BATCH_VIZ_STEPS:-1000,2000,3000}"
 TRAINABLE_MODELS="${TRAINABLE_MODELS:-dit}"
 MAX_PIXELS="${MAX_PIXELS:-262144}"
+
+# WandB overrides (entity/project/host)
+export WANDB_ENTITY="${WANDB_ENTITY:-asinghan}"
+export WANDB_PROJECT="${WANDB_PROJECT:-flux-kontext-rotation}"
+export WANDB_HOST="${WANDB_HOST:-$WANDB_BASE_URL}"
 
 # Learning Rate Scheduler Configuration
 # Options: constant (no decay), cosine (cosine annealing), linear (linear decay), cosine_with_restarts
@@ -676,10 +681,10 @@ accelerate launch \
   --trainable_models "$TRAINABLE_MODELS" \
   --use_gradient_checkpointing \
   --use_wandb \
-  --wandb_project "flux-kontext-rotation" \
+  --wandb_project "$WANDB_PROJECT" \
   --wandb_run_name "$WANDB_RUN_NAME" \
-  --wandb_entity "asinghan" \
-  --wandb_host "https://adobesensei.wandb.io" \
+  --wandb_entity "$WANDB_ENTITY" \
+  --wandb_host "$WANDB_HOST" \
   --s3_checkpoint_path "$S3_CHECKPOINT_PATH"
 
 # Capture exit code
@@ -708,7 +713,7 @@ if [ $TRAIN_EXIT_CODE -eq 0 ]; then
         echo "  S3 Path:           $S3_CHECKPOINT_PATH"
         echo ""
         echo "📈 Monitoring:"
-        echo "  WandB Dashboard:   https://adobesensei.wandb.io/asinghan/flux-kontext-rotation"
+        echo "  WandB Dashboard:   ${WANDB_BASE_URL}/${WANDB_ENTITY}/${WANDB_PROJECT}"
         echo "  Run Name:          $WANDB_RUN_NAME"
         echo ""
         echo "📝 Logs:"
